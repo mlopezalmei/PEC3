@@ -1,9 +1,26 @@
 @use "../variables";
 
 * {
-  box-sizing: border-box;
+  @apply box-border;
 }
 
-.boton {
-  @apply bg-red-500;
+body {
+  @apply flex flex-col min-h-screen m-0 font-family-sans-serif leading-6 text-dark bg-light;
+}
+
+.index-link {
+  @apply flex items-center justify-center font-semibold text-light bg-dark hover:bg-primary;
+}
+
+.participant-card {
+  @apply flex flex-col items-center text-center p-4
+           border-2 border-primary rounded-lg
+           hover:border-dark transition-colors
+           w-full
+           sm:w-[calc(50%-1rem)]
+           lg:w-[calc(33.333%-1rem)];
+}
+
+.participant-img {
+  @apply w-full max-w-[160px] h-[160px] mb-4 object-cover border-[3px] border-primary rounded-full;
 }
