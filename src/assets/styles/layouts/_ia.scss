@@ -1,0 +1,180 @@
+// Variables
+$black: #000;
+$gray: #777;
+$light-gray: #f6f6f6;
+$border: #eaeaea;
+
+// Base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  color: $black;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+// Header
+.header {
+  padding: 24px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+
+  a {
+    text-decoration: none;
+    color: $black;
+    font-size: 14px;
+
+    &.nav__active {
+      background: $black;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+    }
+  }
+}
+
+// Hero
+.hero {
+  text-align: center;
+  padding: 80px 0 40px;
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: $gray;
+    font-size: 16px;
+  }
+}
+
+// Image
+.hero-image {
+  margin-bottom: 80px;
+
+  img {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+// Recipes
+.recipes {
+  margin-bottom: 100px;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    color: $gray;
+    margin-bottom: 32px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.recipe-card {
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 24px;
+  background: white;
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__author {
+    display: flex;
+    gap: 12px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    span {
+      font-size: 13px;
+      color: $gray;
+    }
+  }
+}
+
+// Footer
+.footer {
+  border-top: 1px solid $border;
+  padding: 48px 0;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  h4 {
+    margin-bottom: 16px;
+  }
+
+  h5 {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      font-size: 13px;
+      color: $gray;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 12px;
+
+    span {
+      width: 16px;
+      height: 16px;
+      background: $gray;
+      border-radius: 50%;
+    }
+  }
+}
